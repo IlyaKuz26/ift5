@@ -30,11 +30,10 @@ spec:
               cpu: "50m"
               memory: "1000Mi"
           livenessProbe:
-            failureThreshold: 1
             httpGet:
               path: /
               port: 80
+            failureThreshold: 1
             periodSeconds: 5
-            successThrehold: 1
             timeoutSeconds: 1
             initialDelaySeconds: 5
